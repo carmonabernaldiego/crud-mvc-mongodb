@@ -12,7 +12,7 @@ var createUserControllerFunc = async (req, res) => {
         }
     } catch (err) {
         console.log(err);
-        res.send({ "status": false, "message": err.msg });
+        res.send({ "status": err.status, "message": err.msg });
     }
 }
 
@@ -29,7 +29,7 @@ var loginUserControllerFunc = async (req, res) => {
         }
     } catch (error) {
         console.log(error);
-        res.send({ "status": false, "message": error.msg });
+        res.send({ "status": error.status, "message": error.msg });
     }
 }
 
@@ -46,7 +46,7 @@ var updateUserControllerFunc = async (req, res) => {
 
     } catch (error) {
         console.log(error);
-        res.send({ "status": false, "message": error.msg });
+        res.send({ "status": error.status, "message": error.msg });
     }
 }
 
@@ -62,7 +62,7 @@ var deleteUserControllerFunc = async (req, res) => {
         }
     } catch (error) {
         console.log(error);
-        res.send({ "status": false, "message": error.msg });
+        res.send({ "status": error.status, "message": error.msg });
     }
 }
 
@@ -78,7 +78,7 @@ var searchEmailControllerFunc = async (req, res) => {
         }
     } catch (error) {
         console.log(error);
-        res.send({ "status": false, "message": error.msg });
+        res.send({ "status": error.status, "message": error.msg });
     }
 }
 
