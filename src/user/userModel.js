@@ -2,16 +2,17 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var userSchema = new Schema({
-    firstName: {
+    firstname: {
         type: String,
         required: true
     },
-    lastName: {
+    lastname: {
         type: String,
         required: true
     },
     email: {
         type: String,
+        unique: true,
         required: true
     },
     password: {
@@ -24,5 +25,5 @@ var userSchema = new Schema({
     }
 });
 
-//  Collection "users"
+// Collection "users"
 module.exports = mongoose.model('users', userSchema);
